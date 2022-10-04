@@ -2,7 +2,6 @@ import React from 'react'
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Coins from './components/Coins/Coins';
-import NavBarInfo from './components/NavBarInfo';
 import CoinDetail from './components/CoinDetail/CoinDetail';
 import Watchlist  from './components/Watchlist/Watchlist';
 
@@ -13,7 +12,6 @@ function App() {
     <CryptoState>
       <BrowserRouter>
         <div className='text-black dark:text-white dark:bg-[#052f4b] bg-[#FAFAFA]'>
-          <NavBarInfo />
           <NavBar />
           <Routes>
             <Route path='/' element={<Coins />} /> 
