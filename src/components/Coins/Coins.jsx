@@ -39,7 +39,7 @@ function Coins() {
                   onChange={(e) => setSearch(e.target.value)} 
                   placeholder="Search Crypto.." 
                   required
-                  className="block p-2 pl-10 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+                  className="block p-2 pl-10 w-full text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
                 />
             </div>
         </form>
@@ -51,8 +51,8 @@ function Coins() {
         : 
       (
       <div className='max-w-5xl mx-auto'>
-        <div className="grid grid-cols-1 border text-black dark:text-white my-10">
-          <div className='grid grid-cols-3 py-4 px-4 border-b sticky top-0 bg-white dark:bg-black'>
+        <div className="grid grid-cols-1 border my-10">
+          <div className='grid grid-cols-3 py-4 px-4 border-b sticky top-0'>
             <p>Crypto</p>
             <p>Price</p>
             <p>Marketcap</p>

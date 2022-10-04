@@ -12,7 +12,7 @@ function App() {
   return (
     <CryptoState>
       <BrowserRouter>
-        <div className='text-black dark:text-white bg-slate-100 dark:bg-slate-700'>
+        <div className='text-black dark:text-white dark:bg-[#052f4b] bg-[#FAFAFA]'>
           <NavBarInfo />
           <NavBar />
           <Routes>
