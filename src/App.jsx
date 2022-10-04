@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react'
+import React from 'react'
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Coins from './components/Coins/Coins';
@@ -12,7 +12,7 @@ function App() {
   return (
     <CryptoState>
       <BrowserRouter>
-        <div className='text-black dark:text-white'>
+        <div className='text-black dark:text-white bg-slate-100 dark:bg-slate-700'>
           <NavBarInfo />
           <NavBar />
           <Routes>
