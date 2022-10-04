@@ -4,7 +4,7 @@ import ToogleTheme from './ToogleTheme'
 
 const InfoCrypto = () => {
   return(
-    <div className='border-b'>
+    <div className='border-b border-slate-200 dark:border-neutral-500'>
         <div className='max-w-7xl mx-auto flex justify-between items-center h-9'>
             <div className='flex gap-3'>
                 <p className='text-xs'>Coins: <span className='text-blue-500'>13178</span></p>
@@ -41,7 +41,7 @@ const InfoCrypto = () => {
 
 const NavCrypto = () => {
   return(
-    <div className='bg-slate-50 dark:bg-zinc-800 border-b mb-6'>
+    <div className='bg-slate-50 dark:bg-zinc-800 border-b border-slate-200 dark:border-neutral-500 mb-6'>
       <div className='max-w-7xl mx-auto flex justify-between items-center h-16'>
         <Link to='/'><h1 className="text-xl font-bold underline">Cryptocurrency Market</h1></Link>
         <div className='flex gap-4 items-center'>

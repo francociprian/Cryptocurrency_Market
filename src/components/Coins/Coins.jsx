@@ -51,8 +51,8 @@ function Coins() {
         : 
       (
       <div className='max-w-5xl mx-auto'>
-        <div className="grid grid-cols-1 border my-10">
-          <div className='grid grid-cols-3 py-4 px-4 border-b sticky top-0 dark:bg-[#052f4b] bg-[#FAFAFA]'>
+        <div className="grid grid-cols-1 border border-slate-200 dark:border-neutral-500 my-10">
+          <div className='grid grid-cols-3 py-4 px-4 border-b border-slate-200 dark:border-neutral-500 sticky top-0 bg-slate-50 dark:bg-zinc-800'>
             <p>Crypto</p>
             <p>Price</p>
             <p>Marketcap</p>

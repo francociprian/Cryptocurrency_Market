@@ -7,11 +7,33 @@ import Watchlist  from './components/Watchlist/Watchlist';
 
 import CryptoState from './Context/CryptoState';
 
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Filler,
+} from 'chart.js'
+
 function App() {
+  
+    ChartJS.register(
+      CategoryScale,
+      LinearScale,
+      PointElement,
+      LineElement,
+      Title,
+      Tooltip,
+      Filler
+    )
+
   return (
     <CryptoState>
       <BrowserRouter>
-        <div className='text-black dark:text-white dark:bg-[#052f4b] bg-[#FAFAFA]'>
+        <div className='text-black dark:text-white dark:bg-[#17171a] bg-[#FAFAFA] min-h-screen'>
           <NavBar />
           <Routes>
             <Route path='/' element={<Coins />} /> 

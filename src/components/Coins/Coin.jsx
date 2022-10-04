@@ -19,7 +19,7 @@ const Coin = ({ coins, search }) => {
         } else if(coin.name.toLowerCase().includes(search.toLowerCase())){
             return coin
         }}).map((coin) => 
-          <div className="border-b py-2 px-4 cursor-pointer" key={coin.id} onClick={() => navigate(`/coin/${coin.id}`)}>
+          <div className="border-b border-slate-200 dark:border-neutral-500  py-2 px-4 cursor-pointer" key={coin.id} onClick={() => navigate(`/coin/${coin.id}`)}>
             <div className='grid grid-cols-3'>
               <div className='flex gap-4'>
                 <span className='w-[20px]'>{coin.market_cap_rank}</span>
