@@ -2,12 +2,14 @@ import React,{ useContext, useState, useEffect } from 'react';
 import Coin from './Coin';
 import CryptoContext from '../../Context/CryptoContext';
 import Loader from '../Loader';
-
+import { useNavigate } from 'react-router-dom';
 
 function Coins() {
+  const navigate = useNavigate();
+  const [search, setSearch] = useState('');
+
   const { coins, getCoins } = useContext(CryptoContext);
   const [loading, setLoading] = useState(true);
-  const [search, setSearch] = useState('');
 
   useEffect(() => {
     getCoins();
@@ -27,7 +29,7 @@ function Coins() {
 
   return (
     <>
-      <div className='max-w-xs mx-auto'>
+      {/* <div className='max-w-xs mx-auto'>
         <form>   
             <label htmlFor="default-search" className="text-sm font-medium text-gray-900 sr-only dark:text-gray-300">Search</label>
             <div className="relative">
@@ -43,7 +45,22 @@ function Coins() {
                 />
             </div>
         </form>
-      </div>
+        <div className='overflow-scroll h-48 absolute z-50 bg-slate-50 dark:bg-zinc-800'>
+          {coins.filter(coin => {
+          if(search == ""){
+              return null
+          } else if(coin.name.toLowerCase().includes(search.toLowerCase())){
+              return coin
+          }}).map((coin) => 
+            <div className=" py-2 px-4 cursor-pointer border border-slate-200 dark:border-neutral-500" key={coin.id} onClick={() => navigate(`/coin/${coin.id}`)}>
+              <div className='flex justify-center items-center gap-2'>
+                <img src={coin.image} alt={coin.name} className='h-9 w-9'/>
+                <p>{coin.name}</p>
+              </div>
+            </div>
+          )}
+        </div>
+      </div> */}
       {loading ? 
       (<div className='flex justify-center items-center h-[80vh] w-full'>
         <Loader />

@@ -13,28 +13,8 @@ const Coin = ({ coins, search }) => {
 
   return (
     <>
-      {coins.filter(coin => {
-        if(search == ""){
-            return coin
-        } else if(coin.name.toLowerCase().includes(search.toLowerCase())){
-            return coin
-        }}).map((coin) => 
-          <div className="border-b border-slate-200 dark:border-neutral-500  py-2 px-4 cursor-pointer" key={coin.id} onClick={() => navigate(`/coin/${coin.id}`)}>
-            <div className='grid grid-cols-3'>
-              <div className='flex gap-4'>
-                <span className='w-[20px]'>{coin.market_cap_rank}</span>
-                <div className='flex justify-center items-center gap-2'>
-                  <img src={coin.image} alt={coin.name} className='h-9 w-9'/>
-                  <p>{coin.name}</p>
-                </div>
-              </div>
-              <p>{currencyPrice(coin.current_price)}</p>
-              <p>{currencyMarketCap(coin.market_cap)}</p>
-            </div>
-          </div>
-      )}
-
-      {/* {coins.map((coin) => 
+      <div>
+        {coins.map((coin) => 
           <div 
             key={coin.id} 
             className="border-b py-2 px-4 cursor-pointer hover:bg-slate-100" 
@@ -52,7 +32,8 @@ const Coin = ({ coins, search }) => {
               <p>{currencyMarketCap(coin.market_cap)}</p>
             </div>
           </div>
-      )} */}
+        )}
+      </div>
     </>     
   )
 }
